@@ -1,0 +1,129 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+:root{
+  --ff:Roboto,san-serif
+  
+}
+*{
+  font-family:var(--ff);
+  user-select:none;
+}
+ol,ul{
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+button{
+  cursor:pointer;
+}
+body{
+  min-height:100dvh;
+}
+#main{
+  display:grid;
+  gap:calc(10/16*1rem);
+}
+.hero{
+  display:grid;
+}
+.hero__title{
+  margin-inline:auto;
+
+}
+.hero__form{
+  margin-inline:auto;
+}
+.filter{
+  display:flex;
+  gap:10px;
+  margin-inline:10px;
+  span{
+    border:1px solid;
+    padding-inline:10px;
+    cursor:pointer;
+
+  }
+}
+ul{
+  display:grid;
+  gap:4px;
+  padding-inline:10px;
+  li{
+    display:flex;
+    gap:10px;
+  }
+  li button{
+    border:0;
+    background:white;
+    font-weight:900;
+  }
+  li label,
+  li input[type="text"],
+  li input:not([type="checkbox"]) {
+    flex-grow: 1; 
+    max-inline-size:300px;
+    cursor: pointer;
+  }
+}
+footer{
+  display:flex;
+  gap:20px;
+  padding-inline:10px;
+
+}
+.active{
+  color:white;
+  background:green;
+}
