@@ -16,3 +16,4 @@ yarn dev
 pnpm install
 pnpm run dev
 ```
+<img width="608" height="293" alt="image" src="https://github.com/user-attachments/assets/c8b78672-08f4-464c-afa7-a8d1165a5be2" />
